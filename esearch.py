@@ -15,7 +15,7 @@ keyword_match = []
 
 def main(wf: Workflow3) -> None:
     """Define Main function."""
-    if os.path.isfile(f"{base_path}/../emoji.tab"):
+    if os.path.isfile(f"{base_path}/emoji.tab"):
         pass
     else:
         wf.add_item(
@@ -32,7 +32,7 @@ def main(wf: Workflow3) -> None:
     except:
         query = ""
 
-    with open(f"{base_path}/../emoji.tab") as f:
+    with open(f"{base_path}/emoji.tab") as f:
         for idx, line in enumerate(f, 1):
             split_list = line.strip().split("\t")
             if len(split_list) != 6:
